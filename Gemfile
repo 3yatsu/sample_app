@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
+#ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.0'
 
@@ -7,18 +9,23 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
-group :assets do
-  gem 'sass-rails', '~> 4.0.0'
-  gem 'coffee-rails'
-  gem 'uglifier'
+group :test do
+  gem 'selenium-webdriver'
+  gem 'capybara'
 end
 
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
 gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder'
 
-group :test do
-  gem 'capybara'
+group :doc do
+  gem 'sdoc', require: false
 end
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
